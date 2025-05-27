@@ -1,7 +1,12 @@
 const express = require("express");
 const app = express();
 const fs = require("fs");
-const { getArvoreId, addArvore, removeArvore } = require("./funcoes");
+const {
+  getArvoreId,
+  addArvore,
+  removeArvore,
+  updateArvore,
+} = require("./funcoes");
 //const rotasArvore = require("./rotas/arvore");
 
 const PORT = 3000;
@@ -29,9 +34,16 @@ app.post("/", (req, res) => {
 
 app.delete("/:id", (req, res) => {
   const id = req.params.id;
-  console.log("removido...");
   arvoreApagada = removeArvore(id);
-  res.send(arvoreApagada);
+    res.send(arvoreApagada);
+  
+});
+
+app.patch("/:id", (req, res) => {
+  const id = req.params.id;
+  const body = req.body;
+  arvoreEditada = updateArvore(id, body);
+  res.send(arvoreEditada);
 });
 
 //app.use(rotasArvore);
