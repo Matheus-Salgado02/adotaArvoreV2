@@ -1,9 +1,7 @@
 export default function Inserir() {
   return (
     <div>
-      <header className="header"><h1>AdotaArvoreV2</h1></header>
       <div className="main">
-        
         <div className="quadrado-principal">
           <div className="insercoes">
             <h2>Id da árvore</h2>
@@ -12,12 +10,10 @@ export default function Inserir() {
             <textarea type="number" placeholder="especie..."></textarea>
             <h2>Habitat</h2>
             <textarea type="number" placeholder="habitat..."></textarea>
-            <br/>
-            <br/>
+            <br />
+            <br />
             <button>Adicionar</button>
-
           </div>
-
         </div>
       </div>
     </div>
