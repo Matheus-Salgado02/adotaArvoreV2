@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
+import './styles.css'
 
 export default function Home() {
   return (
     <div>
+      <div className="background">
       <div className="main">
         <div className="quadrado-principal">
           <div className="inserir">
@@ -26,6 +28,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

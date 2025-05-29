@@ -6,14 +6,14 @@ export default function Inserir() {
       <div className="main">
         <div className="quadrado-principal">
           <div className="insercoes">
+            <h2>Adicionar uma nova arvore</h2>
             <label>Id da árvore</label>
-            <input type="number" placeholder="id..."></input>
+            <input type="number" placeholder="..."></input>
             <label>Especie</label>
-            <input type="text" placeholder="especie..."></input>
+            <input type="text" placeholder="..."></input>
             <label>Habitat</label>
-            <input type="text" placeholder="habitat..."></input>
-            <br />
-            <br />
+            <input type="text" placeholder="..."></input>
+            
             <button>Adicionar</button>
           </div>
         </div>
