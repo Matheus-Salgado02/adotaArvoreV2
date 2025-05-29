@@ -8,17 +8,20 @@ const {
   updateArvore,
 } = require("./funcoes");
 //const rotasArvore = require("./rotas/arvore");
+const cors = require("cors");
 
-const PORT = 3000;
+const PORT = 5000;
 
 app.use(express.json());
+app.use(cors({ origin: "*" }));
 
 app.listen(PORT, () => {
-  console.log("ouvindo...");
+  console.log(`ouvindo na porta ${PORT}`);
 });
 
 app.get("/", (req, res) => {
   const arvore = JSON.parse(fs.readFileSync("arvores.json"));
+  console.log("recebido");
   res.send(arvore);
 });
 
@@ -35,8 +38,7 @@ app.post("/", (req, res) => {
 app.delete("/:id", (req, res) => {
   const id = req.params.id;
   arvoreApagada = removeArvore(id);
-    res.send(arvoreApagada);
-  
+  res.send(arvoreApagada);
 });
 
 app.patch("/:id", (req, res) => {
