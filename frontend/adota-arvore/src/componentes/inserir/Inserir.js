@@ -1,15 +1,17 @@
+import './styles.css'
+
 export default function Inserir() {
   return (
     <div>
       <div className="main">
         <div className="quadrado-principal">
           <div className="insercoes">
-            <h2>Id da árvore</h2>
-            <textarea type="number" placeholder="id..."></textarea>
-            <h2>Especie</h2>
-            <textarea type="number" placeholder="especie..."></textarea>
-            <h2>Habitat</h2>
-            <textarea type="number" placeholder="habitat..."></textarea>
+            <label>Id da árvore</label>
+            <input type="number" placeholder="id..."></input>
+            <label>Especie</label>
+            <input type="text" placeholder="especie..."></input>
+            <label>Habitat</label>
+            <input type="text" placeholder="habitat..."></input>
             <br />
             <br />
             <button>Adicionar</button>
