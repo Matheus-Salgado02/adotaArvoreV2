@@ -5,6 +5,6 @@ const url = axios.create({
 });
 
 export default async function getArvore() {
-  const reponse = await url.get('/');
-  console.log(reponse.data);
+  const reponse = await url.get("/");
+  return reponse.data;
 }
