@@ -8,3 +8,7 @@ export default async function getArvore() {
   const reponse = await url.get("/");
   return reponse.data;
 }
+
+export async function postArvore(){
+  await axios.post('/',{})
+}

@@ -1,6 +1,11 @@
-import './styles.css'
+import { postArvore } from "../../servicos/api";
+import "./styles.css";
 
 export default function Inserir() {
+  async function post() {
+    const postArv = await postArvore();
+  }
+
   return (
     <div>
       <div className="main">
@@ -13,8 +18,14 @@ export default function Inserir() {
             <input type="text" placeholder="..."></input>
             <label>Habitat</label>
             <input type="text" placeholder="..."></input>
-            
-            <button>Adicionar</button>
+
+            <button
+              onClick={async () => {
+                await postArvore();
+              }}
+            >
+              Adicionar
+            </button>
           </div>
         </div>
       </div>
