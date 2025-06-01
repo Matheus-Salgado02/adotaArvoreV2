@@ -1,21 +1,17 @@
-import { useState } from "react";
 import { postArvore } from "../../servicos/api";
 import "./styles.css";
 
 export default function Inserir() {
-  const [form, setForm] = useState([]);
-
-  async function post() {
-    console.log("aqi");
-    await postArvore();
-  }
-
   async function formulario(e) {
+    e.preventDefault();
     const id = e.target.id.value;
     const especie = e.target.especie.value;
     const habitat = e.target.habitat.value;
 
-    console.log(id, especie, habitat);
+    const obj = { id: parseInt(id), especie: especie, habitat: habitat };
+    console.log(obj);
+
+    postArvore(obj);
   }
 
   return (
@@ -23,9 +19,10 @@ export default function Inserir() {
       <div className="main">
         <div className="quadrado-principal">
           <div className="insercoes">
-            <form onSubmit={async (e) => {
-             await formulario(e)
-            }}>
+            <form
+              onSubmit={(e) => {
+                formulario(e);
+              }}>
               <h2>Adicionar uma nova arvore</h2>
               <label>Id da árvore</label>
               <input

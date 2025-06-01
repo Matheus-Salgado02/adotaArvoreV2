@@ -9,8 +9,6 @@ export default async function getArvore() {
   return reponse.data;
 }
 
-export async function postArvore(){
-  await axios.post('/',{}).then(function(response){
-    console.log(response)
-  })
+export async function postArvore(dados) {
+  await axios.post("http://localhost:5000/", dados);
 }

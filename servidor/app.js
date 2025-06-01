@@ -33,7 +33,7 @@ app.get("/:id", (req, res) => {
 app.post("/", (req, res) => {
   const novo = req.body;
   res.send(addArvore(novo));
-  res.send('post recebido')
+  console.log('recebido post')
 });
 
 app.delete("/:id", (req, res) => {
