@@ -6,13 +6,8 @@ export default function Visualizar() {
 
   async function lerArvore() {
     const dados = await getArvore();
-    console.log(dados);
     setMostrar(dados);
   }
-
-  useEffect(() => {
-    lerArvore();
-  });
 
   return (
     <div>
@@ -20,8 +15,14 @@ export default function Visualizar() {
         <div className="quadrado-principal">
           <h1>Arvores adotadas</h1>
 
-          <div className="lista-arvores"></div>
-          <button>Ver</button>
+          <ul>
+            {mostrar.map((e) => (
+              <li key={e.id}>
+                <p>{e.id}</p>
+              </li>
+            ))}
+          </ul>
+          <button onClick={lerArvore}>Ver</button>
         </div>
       </div>
     </div>
