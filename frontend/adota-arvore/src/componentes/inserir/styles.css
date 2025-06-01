@@ -1,40 +1,40 @@
-.insercoes{
-    margin: 24px 0;
-    display: block;
-    padding: 10px;
-   
+.insercoes {
+  margin: 24px 0;
+  display: block;
+  padding: 10px;
 }
 
-.insercoes label{
-    display: block;
-    margin-bottom: 8px;
-    font-size: 24px;
-    margin: 10px;
+.insercoes label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 24px;
+  margin: 10px;
 }
 
-.insercoes input{
-    background-color: #fff;
-    box-shadow: 10px 10px 30px rgba(0,0,0,0.06);
-    width: 100%;
-    border: none;
-    font-size: 24px;
-    padding: 24px;
-    box-sizing: border-box;
-    margin: 10px;
+.inserir- {
+  background-color: #fff;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  border: none;
+  font-size: 24px;
+  padding: 24px;
+  box-sizing: border-box;
+  margin: 10px;
 }
 
-.insercoes button{
-    width: 100%;
-    padding: 24px;
-    transition: background-color 0.25s;
-    box-shadow: 10px 10px 30px rgba(0,0,0,0.06);
-    font-size: 1.5rem;
-    margin: 10px;
-    
-   
-    
+.botao-submit {
+  width: 100%;
+  padding: 24px;
+  transition: background-color 0.25s;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+  font-size: 1.5rem;
+  margin: 10px;
+  background-color: #1a1a1a;
+  color: white;
+  cursor: pointer;
+  transition: border-color 0.25s;
 }
 
-.insercoes button:hover{
-    background-color: gray;
+.botao-submit:hover {
+  border-color: #646cff;
 }

@@ -10,5 +10,7 @@ export default async function getArvore() {
 }
 
 export async function postArvore(){
-  await axios.post('/',{})
+  await axios.post('/',{}).then(function(response){
+    console.log(response)
+  })
 }

@@ -15,16 +15,17 @@ export default function Visualizar() {
       <div className="main">
         <div className="quadrado-principal">
           <h1>Arvores adotadas</h1>
-
-          <ul>
-            {mostrar.map((e) => (
-              <li key={e.id}>
-                <h1>{e.id}</h1>
-                <h2>{e.especie}</h2>
-                <h3>{e.habitat}</h3>
-              </li>
-            ))}
-          </ul>
+          <div>
+            <ul>
+              {mostrar.map((e) => (
+                <li key={e.id}>
+                  <h1>{e.id}</h1>
+                  <h3>{e.especie}</h3>
+                  <h3>{e.habitat}</h3>
+                </li>
+              ))}
+            </ul>
+          </div>
 
           <button onClick={lerArvore}>Mostrar</button>
           <button

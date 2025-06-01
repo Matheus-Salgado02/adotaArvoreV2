@@ -35,6 +35,14 @@ function removeArvore(id) {
   }
 }
 
+(arvore) =>{
+
+}
+
+function funcao(arvore){
+  
+}
+
 function updateArvore(id, dadoEditado) {
   const arvores = JSON.parse(fs.readFileSync("arvores.json"));
   const index = arvores.findIndex((arv) => arv.id == id);
