@@ -6,6 +6,7 @@ export default function Visualizar() {
 
   async function lerArvore() {
     const dados = await getArvore();
+    console.log(mostrar);
     setMostrar(dados);
   }
 
@@ -18,11 +19,21 @@ export default function Visualizar() {
           <ul>
             {mostrar.map((e) => (
               <li key={e.id}>
-                <p>{e.id}</p>
+                <h1>{e.id}</h1>
+                <h2>{e.especie}</h2>
+                <h3>{e.habitat}</h3>
               </li>
             ))}
           </ul>
-          <button onClick={lerArvore}>Ver</button>
+
+          <button onClick={lerArvore}>Mostrar</button>
+          <button
+            onClick={() => {
+              setMostrar([]);
+            }}
+          >
+            Esconder
+          </button>
         </div>
       </div>
     </div>
